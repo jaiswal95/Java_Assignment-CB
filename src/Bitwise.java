@@ -1,7 +1,7 @@
 
 /*
 
- 1.Bitwise(Print Primes)
+ Bitwise(Print Primes)
 
 Take N as input. Print all prime numbers from 2 to N.
 

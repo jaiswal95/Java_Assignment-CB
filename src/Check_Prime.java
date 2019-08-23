@@ -1,6 +1,6 @@
 /*
 
- 3. Check prime
+ Check prime
 
 Take as input a number N, print "Prime" if it is prime if not Print "Not Prime".
 
