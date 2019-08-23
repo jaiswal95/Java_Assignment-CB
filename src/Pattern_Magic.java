@@ -2,7 +2,7 @@
    
 Print Magic
 
-You will be given a number N. You have to code a hollow diamond looking pattern. The output for N=5 is given in the following image.
+You will be given a number N. You have to code a hollow diamond looking pattern. The output for (N=5) is given in the following image.
 
 *********
 **** ****
