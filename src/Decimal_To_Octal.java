@@ -1,3 +1,4 @@
+
 /*
  
  Decimal To Octal
@@ -18,7 +19,7 @@ Output Format
 
 import java.util.Scanner;
 
-public class Decimal_To_Octal{
+public class Decimal_To_Octal {
 
 	public static void main(String[] args) {
 		Scanner scn = new Scanner(System.in);

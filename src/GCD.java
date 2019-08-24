@@ -1,3 +1,4 @@
+
 /*
  GCD
  
@@ -27,17 +28,17 @@ public class GCD {
 		int a = scn.nextInt();
 		int b = scn.nextInt();
 		int temp;
-		if(!(a>=b)) {
-			temp=a;
-			a=b;
-			b=temp;
-			}
-		while(b!=0) {
-			int rem=a%b;
-			a=b;
-			b=rem;
+		if (!(a >= b)) {
+			temp = a;
+			a = b;
+			b = temp;
+		}
+		while (b != 0) {
+			int rem = a % b;
+			a = b;
+			b = rem;
 		}
 		System.out.println(a);
-		
+
 	}
 }

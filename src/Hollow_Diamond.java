@@ -1,3 +1,4 @@
+
 /*
  
  Hollow Diamond (Pattern 19 Practice)
@@ -44,7 +45,7 @@ public class Hollow_Diamond {
 			// Stars
 			int cst = 1;
 			while (cst <= nst) {
-				System.out.print("*"+"\t");
+				System.out.print("*" + "\t");
 				cst++;
 			}
 			// spaces
@@ -62,7 +63,7 @@ public class Hollow_Diamond {
 				cst = 2;
 			}
 			while (cst <= nst) {
-				System.out.print("*"+"\t");
+				System.out.print("*" + "\t");
 				cst++;
 			}
 
