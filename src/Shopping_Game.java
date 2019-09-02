@@ -32,7 +32,7 @@ public class Shopping_Game {
 	public static void main(String[] args) {
 
 		Scanner scn = new Scanner(System.in);
-		int t = scn.nextInt();// no.of test cases
+		int t = scn.nextInt();// Test cases
 
 		while (t-- > 0) {
 			long M = scn.nextInt();// aayush

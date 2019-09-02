@@ -14,8 +14,9 @@ Pattern Hourglass
   4 3 2 1 0 1 2 3 4 
 5 4 3 2 1 0 1 2 3 4 5 
  */
+
 import java.util.Scanner;
-public class Pattern_Hourglass {
+  public class Pattern_Hourglass {
 
 
     public static void main(String[] args) {
