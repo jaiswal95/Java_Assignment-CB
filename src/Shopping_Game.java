@@ -1,4 +1,3 @@
-
 /*
  
  Faculty at CodingBlocks loves to purchase smartphones and decides to play a game. Aayush and Harshit decides to shop for smartphones. 
