@@ -1,5 +1,5 @@
-
 /*
+ Increasing Decreasing Sequence.
  
  Take the following as input.
 
@@ -37,7 +37,7 @@ public class Increasing_Decreasing {
 		for (int i = 0; i < arr.length; i++) {
 			arr[i] = scn.nextInt();
 		}
-		if (Checkbiotonic(arr, n) == 1) {
+		if (Check(arr, n) == 1) {
 			System.out.println("true");
 		} else {
 			System.out.println("False");
@@ -45,7 +45,7 @@ public class Increasing_Decreasing {
 
 	}
 
-	public static int Checkbiotonic(int[] arr, int n) {
+public static int Check(int[] arr, int n) {
 
 		int i, j;
 		for (i = 1; i < n - 1; i++) {
