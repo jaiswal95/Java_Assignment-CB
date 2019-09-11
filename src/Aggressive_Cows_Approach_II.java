@@ -41,6 +41,7 @@ public class Aggressive_Cows_Approach_II {
 
 	}
 
+	
 	private static boolean isItPossible(int no_stall, int no_cows, int[] arr, int mid) {
 
 		int cowplaced = 1;
