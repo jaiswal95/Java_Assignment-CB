@@ -1,5 +1,5 @@
 /*
- Form Biggest Numbers
+ Form Biggest Numbers.
  
   You are provided an array of numbers. You need to arrange them in a way that yields the largest value.
 
