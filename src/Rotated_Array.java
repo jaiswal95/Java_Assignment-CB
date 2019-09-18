@@ -1,3 +1,4 @@
+
 /*
  Rotated Array.
  
@@ -44,6 +45,7 @@ public class Rotated_Array {
 		while (low <= high) {
 			if (n == 1)
 				return arr[ans];
+
 			mid = low + ((high - low) / 2);
 			if ((arr[mid] < arr[(mid + 1) % n]) && (arr[mid] < arr[(mid - 1 + n) % n])) {
 				return arr[mid];
