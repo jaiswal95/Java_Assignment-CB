@@ -1,5 +1,5 @@
 /*
- Recursion-Dictionary Order Larger
+ Recursion-Dictionary Order (Larger)
  
  Take as input str, a string. Write a recursive function which prints all the words possible by rearranging 
  the characters of this string which are in dictionary order larger than the given string
@@ -26,10 +26,10 @@ public class Recursion_Dict_Order_Larger {
 	public static void main(String[] args) {
 
 		String str = scn.next();
-		DO_L(str, "", str);
+		DO_L(str, str, "");
 	}
 
-	public static void DO_L(String ques, String ans, String str) {
+	public static void DO_L(String ques, String str, String ans) {
 
 		int res = ans.compareTo(str);
 
@@ -41,10 +41,12 @@ public class Recursion_Dict_Order_Larger {
 		if (ques.length() == 0) {
 			return;
 		}
-		for (int i = 0; i <= ques.length() - 1; i++) {
+		for (int i = 0; i < ques.length(); i++) {
+			
 			char ch = ques.charAt(i);
 			String ros = ques.substring(0, i) + ques.substring(i + 1);
-			DO_L(ros, ans + ch, str);
+
+			DO_L(ros, str, ans + ch);
 		}
 	}
 
