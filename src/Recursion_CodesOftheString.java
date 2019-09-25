@@ -89,11 +89,11 @@ public class Recursion_CodesOftheString {
 		}
 
 		String ch1 = str.substring(0, 1);
-		String restOfTheString1 = str.substring(1);
+		String ros1 = str.substring(1);
 
 		if (Integer.parseInt(ch1, 10) > 0) {
 			char code = (char) (Integer.parseInt(ch1, 10) + 'a' - 1);
-			printCodes_1(restOfTheString1, ans + code);
+			printCodes_1(ros1, ans + code);
 		}
 
 		if (str.length() >= 2) {
