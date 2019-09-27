@@ -97,14 +97,14 @@ public class Recursion_CodesOftheString {
 		}
 
 		if (str.length() >= 2) {
-			String ch12 = str.substring(0, 2);
+			String ch2 = str.substring(0, 2);
 			String ros2 = str.substring(2);
 
-			if (Integer.parseInt(ch12, 10) > 0 && Integer.parseInt(ch12) <= 26) {
-				char code = (char) (Integer.parseInt(ch12, 10) + 'a' - 1);
+			if (Integer.parseInt(ch2, 10) > 0 && Integer.parseInt(ch2) <= 26) {
+				char code = (char) (Integer.parseInt(ch2, 10) + 'a' - 1);
 				printCodes_1(ros2, ans + code);
 			}
-			if (Integer.parseInt(ch12, 10) == 0) {
+			if (Integer.parseInt(ch2, 10) == 0) {
 				printCodes_1(ros2, ans);
 			}
 		}

@@ -1,3 +1,4 @@
+
 /*
  MazePath_D2(Count,Print)
  
@@ -25,3 +26,40 @@
               11
  
  */
+import java.util.Scanner;
+
+public class Recursion_MazePath_D2 {
+	static Scanner scn = new Scanner(System.in);
+
+	public static void main(String[] args) {
+		int er = scn.nextInt();
+		int ec = er;
+		getMazePath(1, 1, er, ec, "");
+
+		System.out.println("\n" + count);
+
+	}
+
+	static int count = 0;
+
+	public static void getMazePath(int current_row, int current_column, int end_row, int end_column, String ans) {
+
+		if (current_row == end_row && current_column == end_column ) {
+			
+			System.out.print(ans + " ");
+			count++;
+			return;
+		}
+		if (current_row > end_row || current_column > end_column) {
+			return;
+		}
+
+		getMazePath(current_row + 1, current_column, end_row, end_column, ans + "V");
+
+		getMazePath(current_row, current_column + 1, end_row, end_column, ans + "H");
+
+		getMazePath(current_row + 1, current_column + 1, end_row, end_column, ans + "D");
+
+	}
+
+}
