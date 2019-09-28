@@ -44,8 +44,8 @@ public class Recursion_MazePath_D2 {
 
 	public static void getMazePath(int current_row, int current_column, int end_row, int end_column, String ans) {
 
-		if (current_row == end_row && current_column == end_column ) {
-			
+		if (current_row == end_row && current_column == end_column) {
+
 			System.out.print(ans + " ");
 			count++;
 			return;
@@ -57,8 +57,8 @@ public class Recursion_MazePath_D2 {
 		getMazePath(current_row + 1, current_column, end_row, end_column, ans + "V");
 
 		getMazePath(current_row, current_column + 1, end_row, end_column, ans + "H");
-
-		getMazePath(current_row + 1, current_column + 1, end_row, end_column, ans + "D");
+		if (current_column > 1 && current_row > 1)
+			getMazePath(current_row + 1, current_column + 1, end_row, end_column, ans + "D");
 
 	}
 
