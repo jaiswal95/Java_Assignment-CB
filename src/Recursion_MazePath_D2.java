@@ -1,3 +1,4 @@
+
 /*
  MazePath_D2(Count,Print)
  
@@ -52,23 +53,14 @@ public class Recursion_MazePath_D2 {
 		if (current_row > end_row || current_column > end_column) {
 			return;
 		}
-		if (current_column == 1 && current_row == 2) {
-			getMazePath(current_row + 1, current_column, end_row, end_column, ans + "V");
 
-			getMazePath(current_row, current_column + 1, end_row, end_column, ans + "H");
-		} else if (current_column == 2 && current_row == 1) {
-			getMazePath(current_row + 1, current_column, end_row, end_column, ans + "V");
+		getMazePath(current_row + 1, current_column, end_row, end_column, ans + "V");
 
-			getMazePath(current_row, current_column + 1, end_row, end_column, ans + "H");
-		} else {
-			getMazePath(current_row + 1, current_column, end_row, end_column, ans + "V");
+		getMazePath(current_row, current_column + 1, end_row, end_column, ans + "H");
 
-			getMazePath(current_row, current_column + 1, end_row, end_column, ans + "H");
-
+		if (current_column == current_row || (current_column + current_row) == end_row + 1) {
 			getMazePath(current_row + 1, current_column + 1, end_row, end_column, ans + "D");
-
 		}
-
 	}
 
 }
