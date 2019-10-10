@@ -1,3 +1,4 @@
+
 /*
  Maximum Sum Path in Two Arrays
   
@@ -32,54 +33,55 @@ public class MaximumSumPath_TwoSortedArray {
 	static Scanner scn = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		int t =scn.nextInt();
-		while(t-->0) {
-		int n = scn.nextInt();
-		int m = scn.nextInt();
+		int t = scn.nextInt();
+		while (t-- > 0) {
+			int n = scn.nextInt();
+			int m = scn.nextInt();
 
-		int[] one = new int[n];
-		int[] two = new int[m];
-		for(int i=0;i<one.length;i++) {
-			one[i]=scn.nextInt();
-		}
-		for(int i=0;i<two.length;i++) {
-			two[i]=scn.nextInt();
-		}
-		
-		int i = 0, j = 0;
-		int s1 = 0, s2 = 0;
-		int total = 0;
-		while (i < one.length && j < two.length) {
+			int[] one = new int[n];
+			int[] two = new int[m];
 
-			if (one[i] < two[j]) {
-				s1 += one[i];
-				i++;
-			} else if (one[i] > two[j]) {
-				s2 += two[j];
-				j++;
-			} else {
-				total += Math.max(s1, s2) + one[i];
-				i++;
-				j++;
-				s1 = 0;
-				s2 = 0;
+			for (int i = 0; i < one.length; i++) {
+				one[i] = scn.nextInt();
 			}
-		}
-		if (i == one.length) {
+			for (int i = 0; i < two.length; i++) {
+				two[i] = scn.nextInt();
+			}
+
+			int i = 0, j = 0;
+			int s1 = 0, s2 = 0;
+			int total = 0;
+			while (i < one.length && j < two.length) {
+
+				if (one[i] < two[j]) {
+					s1 += one[i];
+					i++;
+				} else if (one[i] > two[j]) {
+					s2 += two[j];
+					j++;
+				} else {
+					total += Math.max(s1, s2) + two[j];
+					i++;
+					j++;
+					s1 = 0;
+					s2 = 0;
+				}
+			}
+			// if (i == one.length) {
 			while (j < two.length) {
 				s2 += two[j];
 				j++;
 			}
-		}
+			// }
 
-		if (j == two.length) {
+			// if (j == two.length) {
 			while (i < one.length) {
 				s1 += one[i];
 				i++;
 			}
+			// }
+			total += Math.max(s1, s2);
+			System.out.println(total);
 		}
-		total += Math.max(s1, s2);
-		System.out.println(total);
-	}
 	}
 }
