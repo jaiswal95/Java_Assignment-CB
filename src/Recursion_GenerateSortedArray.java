@@ -27,19 +27,20 @@
         15 30
         25 30
  */
+
+
 import java.util.Scanner;
 
 public class Recursion_GenerateSortedArray {
-	static Scanner scn = new Scanner(System.in);
-
+     static Scanner scn = new Scanner(System.in);
 	public static void main(String[] args) {
+		// TODO Auto-generated method stub
 
-		Recursion_GenerateSortedArray generate = new Recursion_GenerateSortedArray();
-		int n1 = scn.nextInt();
-		int n2 = scn.nextInt();
+		int n = scn.nextInt();
+		int m = scn.nextInt();
 
-		int[] A = new int[n1];
-		int[] B = new int[n2];
+		int[] A = new int[n];
+		int[] B = new int[m];
 
 		for (int i = 0; i < A.length; i++) {
 			A[i] = scn.nextInt();
@@ -48,48 +49,52 @@ public class Recursion_GenerateSortedArray {
 			B[i] = scn.nextInt();
 		}
 
-		int n = A.length;
-		int m = B.length;
-		generate.generate(A, B, n, m);
+
+		int[] C = new int[A.length + B.length];
+
+		printArray(A, B, C, 0, 0, 0, false);
+
 	}
 
-	public void print(int arr[], int n) {
-		for (int i = 0; i < n; i++)
-			System.out.print(arr[i] + " ");
-		System.out.println("");
-	}
+	public static void printArray(int[] A, int[] B, int[] C, int i, int j, int len, boolean isLastA) {
 
-	public void GenerateArray(int[] A, int[] B, int[] C, int i, int j, int m, int n, int len, boolean flag) {
-		if (flag) {
+		if (!isLastA) {
 
 			if (len != 0)
-				print(C, len + 1);
+				display(C, len + 1);
 
-			for (int k = i; k < m; k++) {
+			for (int k = i; k < A.length; k++) {
+
 				if (len == 0) {
 					C[len] = A[k];
-					GenerateArray(A, B, C, k + 1, j, m, n, len, !flag);
-				} else if (A[k] > C[len]) {
-					C[len + 1] = A[k];
-					GenerateArray(A, B, C, k + 1, j, m, n, len + 1, !flag);
+					printArray(A, B, C, k + 1, j, len, true);
+				} else {
+					if (C[len] < A[k]) {
+						C[len + 1] = A[k];
+						printArray(A, B, C, k + 1, j, len + 1, true);
+					}
 				}
 			}
-		}
+		} else {
 
-		else {
-			for (int l = j; l < n; l++) {
-				if (B[l] > C[len]) {
-					C[len + 1] = B[l];
-					GenerateArray(A, B, C, i, l + 1, m, n, len + 1, !flag);
+			for (int k = j; k < B.length; k++) {
+
+				if (C[len] < B[k]) {
+					C[len + 1] = B[k];
+					printArray(A, B, C, i, k + 1, len + 1, false);
 				}
 			}
 		}
 	}
 
-	public void generate(int A[], int B[], int m, int n) {
-		int C[] = new int[m + n];
+	public static void display(int[] C, int len) {
 
-		GenerateArray(A, B, C, 0, 0, m, n, 0, true);
+		for (int i = 0; i < len; i++) {
+
+			System.out.print(C[i] + " ");
+		}
+
+		System.out.println();
 	}
 
 }
