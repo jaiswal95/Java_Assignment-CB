@@ -28,16 +28,16 @@ public class Recursion_TowerOfHanoi {
 		System.out.println(towerOfHanoi(n, "T1", "T2", "T3"));
 	}
     
-	public static int towerOfHanoi(int n, String from_rod, String to_rod, String aux_rod) {
+	public static int towerOfHanoi(int n, String src, String dest, String helper) {
 		if (n == 1) {
-			System.out.println("Move 1th disc from " + from_rod + " to " + to_rod);
+			System.out.println("Move 1th disc from " + src + " to " + dest);
 			return 1;
 		}
-		int count =1;
-		count+=towerOfHanoi(n - 1, from_rod, aux_rod, to_rod);
-		System.out.println("Move " + n + "th" + " disc from " + from_rod + " to " + to_rod);
-		count+=towerOfHanoi(n - 1, aux_rod, to_rod, from_rod);
-		return count;
+		int count =0;
+		count+=towerOfHanoi(n - 1, src, helper, dest);
+		System.out.println("Move " + n + "th" + " disc from " + src + " to " + dest);
+		count+=towerOfHanoi(n - 1, helper, dest, src);
+		return count+1;
 	}
 	
 

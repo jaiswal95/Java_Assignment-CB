@@ -72,8 +72,7 @@ public class Recursion_SplitArray {
 
 				return 1;
 			}
-
-			return 0;
+          return 0;
 		}
 
 		int count = 0;
