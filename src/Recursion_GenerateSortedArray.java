@@ -1,3 +1,4 @@
+
 /*
  Generate Sorted Arrays.
  
@@ -28,13 +29,12 @@
         25 30
  */
 
-
 import java.util.Scanner;
 
 public class Recursion_GenerateSortedArray {
-     static Scanner scn = new Scanner(System.in);
+	static Scanner scn = new Scanner(System.in);
+
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
 		int n = scn.nextInt();
 		int m = scn.nextInt();
@@ -48,7 +48,6 @@ public class Recursion_GenerateSortedArray {
 		for (int i = 0; i < B.length; i++) {
 			B[i] = scn.nextInt();
 		}
-
 
 		int[] C = new int[A.length + B.length];
 
